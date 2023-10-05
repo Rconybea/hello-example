@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: configure self (hello-example)
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/local -CMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/local -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: build self (hello-example)
       run: cmake --build ${{github.workspace}}/build --verbose
