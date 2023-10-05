@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: checkout self (hello-example)
-      run actions/checkout@v3
+      run: actions/checkout@v3
 
     - name: configure self (hello-example)
       run: cmake -B ${{github.workspace}/build -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/local -CMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
